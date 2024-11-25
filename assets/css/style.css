@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #c9c9c9;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .wrapper {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .wrapper .doritus {
+  display: flex;
+  align-items: center;
+  gap: -1rem;
+}
+
+.container .wrapper .doritus span {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, orange, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradientAnimation-218135ab 5s ease infinite;
+}
+
+.container .wrapper .doritus img {
+  width: 44px;
+  transform: rotate(-30deg);
+}
+
+@keyframes gradientAnimation-218135ab {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0% 50%;
+  }
+}
+
+.container .wrapper .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container .wrapper .form .form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 0.25rem;
+}
+
+.container .wrapper .form .form-control label {
+  color: #c9c9c9;
+}
+
+.container .wrapper .form .form-control input {
+  width: 100%;
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #c9c9c9;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50px;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn img {
+  width: 0.65rem;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50px;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn img {
+  width: 0.95rem;
+}
+
+.form-control input:not(:placeholder-shown) + .clear-btn {
+  display: inline;
+}
+
+.container .wrapper .form .form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .wrapper .form .form-buttons button {
+  width: 100%;
+  background: #2c2c2c;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  color: #c9c9c9;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.container .wrapper .form .form-buttons button:hover {
+  background: #4d4d4d;
+}
+
+.container .wrapper .credits {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container .wrapper .credits a {
+  /* color: #7d3efc; */
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.container .wrapper .credits a span {
+  color: #fff;
+  background: linear-gradient(90deg, orange, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradientAnimation-218135ab 5s ease infinite;
+}
+
+.container .wrapper .credits a img {
+  width: 1.2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.card {
+  width: 300px;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid hsla(0, 0%, 100%, 0.14);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  line-height: 1.5rem;
+}
+
+.card-title span {
+  background: linear-gradient(90deg, orange, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  background-size: 200% auto;
+  animation: gradientAnimation-218135ab 5s ease infinite;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button img {
+  width: 0.7rem;
+}
+
+.donate-button {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.donate-button:hover {
+  background-color: #cdcdcd;
+}
+
+.captcha-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 4px 0;
+}
